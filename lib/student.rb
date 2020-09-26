@@ -43,6 +43,16 @@ class Student
     # return a new instance of the Student class
   end
 
+  def self.all_students_in_grade_X(grade)
+    sql = <<-SQL 
+    SELECT * FROM students
+    WHERE grade = ?;
+    SQL 
+    
+    DB[:conn].execute(sql,grade)
+
+  end
+  
   def save
     sql = <<-SQL
       INSERT INTO students (name, grade)
