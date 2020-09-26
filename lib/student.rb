@@ -27,7 +27,7 @@ class Student
     WHERE grade = 9
     SQL
     DB[:conn].execute(sql)
-    
+
   end
   def self.find_by_name(name)
     sql = <<-SQL
@@ -44,15 +44,15 @@ class Student
   end
 
   def self.all_students_in_grade_X(grade)
-    sql = <<-SQL 
+    sql = <<-SQL
     SELECT * FROM students
     WHERE grade = ?;
-    SQL 
-    
+    SQL
+
     DB[:conn].execute(sql,grade)
 
   end
-  
+
   def save
     sql = <<-SQL
       INSERT INTO students (name, grade)
