@@ -6,6 +6,7 @@ class Student
     newstudent.id = row[0]
     newstudent.name = row[1]
     newstudent.grade = row[2]
+    newstudent
     # create a new Student object given a row from the database
   end
 
