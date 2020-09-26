@@ -5,7 +5,7 @@ class Student
     newstudent = self.new
     newstudent.id = row[0]
     newstudent.name = row[1]
-    newstudent.grade = rowp[2]
+    newstudent.grade = row[2]
     # create a new Student object given a row from the database
   end
 
